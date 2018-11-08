@@ -1,0 +1,12 @@
+[Unit]
+Description=Nfdump http server
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=nfdump-http
+Group=nfdump-http
+ExecStart=/usr/bin/nfdump-http-server.pl
+
+[Install]
+WantedBy=multi-user.target
